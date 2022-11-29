@@ -1,0 +1,36 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+body,
+html {
+    min-height: 100vh;
+    height: 100%;
+    background-color: #1c1c1c;
+}
+
+img {
+    max-width: 100%;
+}
+
+button {
+    font-weight: bold;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: .8rem 1.5rem;
+    background: linear-gradient(90deg,
+            rgba(132, 53, 222, 1) 0%,
+            rgba(184, 84, 232, 1) 100%);
+    border-radius: 3rem;
+    border: none;
+}
+
+button:hover {
+    background: linear-gradient(90deg,
+            rgba(184, 84, 232, 1) 0%,
+            rgba(132, 53, 222, 1) 100%);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
