@@ -60,12 +60,7 @@ const renderPokemon = async (pokemon) => {
     pokemonImage.style.display = 'block';
     pokemonName.innerHTML = data.name
     pokemonNumber.innerHTML = data.id
-
-    if (pokemonImage.src = null) {
-      pokemonImage.src = data['sprites']['front_default']
-    } else {
-      pokemonImage.src = data['sprites']['versions']['generation-v']['black-white']['animated']['front_default']
-    }
+    pokemonImage.src = data['sprites']['versions']['generation-v']['black-white']['animated']['front_default']
 
 
     Hp.innerHTML = 'Hp: ' + data['stats']['0']['base_stat']
@@ -83,6 +78,11 @@ const renderPokemon = async (pokemon) => {
     searchPokemon = data.id
     console.log(data)
 
+    if (data.id > 649) {
+      pokemonImage.src = data['sprites']['front_shiny']
+    } else { }
+
+
     try {
 
       habilidade1.innerHTML = data['abilities']['0']['ability']['name'] + ', '
@@ -91,12 +91,19 @@ const renderPokemon = async (pokemon) => {
       console.log("Não existe dados suficientes")
     }
 
-    // if (pokemonImage = null ? pokemonImage.src = data['sprites']['front_default'] : console.log('nao tem foto'));
   } else {
     pokemonImage.style.display = 'none'
     pokemonName.innerHTML = 'Not Found :(';
-    pokemonNumber.innerHTML = ''
-
+    pokemonNumber.innerHTML = '';
+    type1.innerHTML = ''
+    type2.innerHTML = ''
+    habilidade1.innerHTML = ''
+    habilidade2.innerHTML = ''
+    Hp.innerHTML = 'Hp: '
+    Speed.innerHTML = 'Speed: '
+    Weight.innerHTML = 'Weight: '
+    Defense.innerHTML = 'Defense: '
+    Attack.innerHTML = 'Attack: ';
   }
 }
 
@@ -104,9 +111,27 @@ form.addEventListener('submit', (e) => {
   e.preventDefault();
   renderPokemon(input.value.toLowerCase());
   input.value = '';
+  type1.innerHTML = ''
+  type2.innerHTML = ''
+  habilidade1.innerHTML = ''
+  habilidade2.innerHTML = ''
+  Hp.innerHTML = 'Hp: '
+  Speed.innerHTML = 'Speed: '
+  Weight.innerHTML = 'Weight: '
+  Defense.innerHTML = 'Defense: '
+  Attack.innerHTML = 'Attack: ';
 })
 
 BtnPrev.addEventListener('click', () => {
+  type1.innerHTML = ''
+  type2.innerHTML = ''
+  habilidade1.innerHTML = ''
+  habilidade2.innerHTML = ''
+  Hp.innerHTML = 'Hp: '
+  Speed.innerHTML = 'Speed: '
+  Weight.innerHTML = 'Weight: '
+  Defense.innerHTML = 'Defense: '
+  Attack.innerHTML = 'Attack: ';
   if (searchPokemon > 1) {
     searchPokemon -= 1;
     renderPokemon(searchPokemon)
@@ -115,6 +140,15 @@ BtnPrev.addEventListener('click', () => {
 })
 
 BtnNext.addEventListener('click', (e) => {
+  type1.innerHTML = ''
+  type2.innerHTML = ''
+  habilidade1.innerHTML = ''
+  habilidade2.innerHTML = ''
+  Hp.innerHTML = 'Hp: '
+  Speed.innerHTML = 'Speed: '
+  Weight.innerHTML = 'Weight: '
+  Defense.innerHTML = 'Defense: '
+  Attack.innerHTML = 'Attack: ';
   searchPokemon += 1;
   renderPokemon(searchPokemon);
 
