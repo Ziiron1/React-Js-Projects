@@ -1,4 +1,7 @@
 const grid = document.querySelector('.grid');
+const reset = document.querySelector('.reset')
+const spanPlayer = document.querySelector('.player')
+const timer = document.querySelector('.timer')
 
 const characters = [
     'beth',
@@ -20,10 +23,65 @@ const createElement = (tag, className) => {
     return element;
 }
 
+let firstCard = '';
+let secondCard = '';
+
+const checkEndGame = () => {
+    const disabledCards = document.querySelectorAll('.disable-card');
+
+    if (disabledCards.length === 20) {
+        clearInterval(this.loop);
+        alert(`Parabéns, ${spanPlayer.innerHTML}! Seu tempo foi: ${timer.innerHTML}`);
+    }
+}
+
+const checkCards = () => {
+    const firstCharacter = firstCard.getAttribute('data-character');
+    const secondCharacter = secondCard.getAttribute('data-character');
+
+    if (firstCharacter === secondCharacter) {
+
+        firstCard.firstChild.classList.add('disable-card');
+        secondCard.firstChild.classList.add('disable-card');
+
+        firstCard = '';
+        secondCard = '';
+
+        checkEndGame();
+
+    } else {
+
+        setTimeout(() => {
+
+            firstCard.classList.remove('reveal-card');
+            secondCard.classList.remove('reveal-card');
+
+            firstCard = '';
+            secondCard = '';
+        }, 500)
+    }
+
+}
 
 const revealCard = ({ target }) => {
 
-    target.parentNode.classList.add('reveal-card')
+    if (target.parentNode.className.includes('reveal-card')) {
+        return;
+    }
+
+    if (firstCard === '') {
+
+        target.parentNode.classList.add('reveal-card');
+        firstCard = target.parentNode;
+
+    } else if (secondCard === '') {
+
+        target.parentNode.classList.add('reveal-card');
+        secondCard = target.parentNode;
+
+        checkCards();
+
+    }
 }
 
 
@@ -55,4 +113,21 @@ const loadGame = () => {
     });
 }
 
-loadGame()
+const startTimer = () => {
+
+    this.loop = setInterval(() => {
+        const currentTime = +timer.innerHTML;
+        timer.innerHTML = currentTime + 1;
+    }, 1000);
+}
+
+
+window.onload = () => {
+    spanPlayer.innerHTML = localStorage.getItem('player');
+    startTimer();
+    loadGame();
+}
+
+reset.addEventListener('click', () => {
+    window.location.reload(true)
+})
