@@ -1,1 +1,1 @@
-# Pequenos Projetos feitos com React
+# Pequenos Projetos feitos com React / Js
