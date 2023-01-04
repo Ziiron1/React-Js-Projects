@@ -1,4 +1,15 @@
-# Pequenos Projetos feitos com React / Js
+# Small Projects made w/ Js / React
+
+## You can Download this archieve and up the game on your own Pc
+
+
+##### cd/(Project that you want)
+
+##### npm i (to install dependencies)
+
+##### npm run dev (to run the game/app)
+
+<br/>
 
 #### Pokédex https://react-projects-puce.vercel.app
 
