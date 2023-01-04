@@ -11,6 +11,9 @@
 
 <br/>
 
+
+## Some Games/Apps that is already on a Host / Website
+
 #### Pokédex https://react-projects-puce.vercel.app
 
 #### Jogo da memória https://memorygames.vercel.app
