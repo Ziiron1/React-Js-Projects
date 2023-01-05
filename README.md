@@ -18,4 +18,4 @@
 
 #### Jogo da memória https://memorygames.vercel.app
 
-#### Galeria de Fotos https://galleryphotoreact.vercel.app
+#### Jogo da Velha https://tictactoe-reactapp.vercel.app
