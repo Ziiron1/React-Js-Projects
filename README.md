@@ -13,24 +13,24 @@ Se você se interessou pela ideia, confira os projetos abaixo:
     <td>
         <h3>00 - Pokédex</h3>
         <li><a href="./Pokedex/">Código</a></li>
-        <a href="https://ziiron1.github.io/React-Js-Projects/Pokedex/index.html"><img src="./img/Pokedex.gif" width="250px"></a>
+        <a href="https://ziiron1.github.io/React-Js-Projects/Pokedex/index.html"><img src="./img/Pokedex.gif" width="300px"></a>
     </td>
       <td>
         <h3>01 - Jogo da memória</h3>
         <li><a href="./MemoryGame/">Código</a></li>
-        <a href="https://ziiron1.github.io/React-Js-Projects/MemoryGame/index.html"><img src="./img/MemoryGame.gif" width="250px"></a>
+        <a href="https://ziiron1.github.io/React-Js-Projects/MemoryGame/index.html"><img src="./img/MemoryGame.gif" width="300px"></a>
     </td>
     <td>
       <h3>02 - Jogo da Velha</h3>
       <li><a href="./TictacToe/">Código</a></li>
-      <a href="https://tictactoe-reactapp.vercel.app"><img src="./img/TicTacToe.gif" width="250px" ></a>
+      <a href="https://tictactoe-reactapp.vercel.app"><img src="./img/TicTacToe.gif" width="300px" ></a>
     </td>
   </tr>
   <tr>
     <td>
       <h3>03 - Galeria de Fotos</h3>
       <li><a href="./GalleryPhotos/">Código</a></li>
-      <a href="https://react-js-projects-one.vercel.app"><img src="./img/GalleryPhotos.png" width="250px" ></a>
+      <a href="https://react-js-projects-one.vercel.app"><img src="./img/GalleryPhotos.png" width="300px" ></a>
     </td>
   </tr>
 </table>
